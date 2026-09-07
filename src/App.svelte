@@ -32,8 +32,8 @@
     <!-- 5. Rate Card & Paket Maintenance (Disembunyikan sementara) -->
     <!-- <RateCard /> -->
 
-    <!-- 6. Proses Kerja -->
-    <Process />
+    <!-- 6. Proses Kerja (Disembunyikan sementara) -->
+    <!-- <Process /> -->
 
     <!-- 7. Tentang Pradana -->
     <About />
