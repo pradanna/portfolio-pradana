@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition';
+  import { cubicOut } from 'svelte/easing';
   import { navigationItems } from '../../data/navigation';
   import Button from '../common/Button.svelte';
 
@@ -59,7 +61,12 @@
 
   <!-- Mobile Drawer -->
   {#if isMobileMenuOpen}
-    <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div
+      class="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      transition:slide={{ duration: 280, easing: cubicOut }}
+    >
       <div class="mobile-nav-links">
         {#each navigationItems as item}
           <a href={item.href} class="mobile-nav-link" onclick={closeMenu}>
@@ -231,10 +238,10 @@
 
   /* Mobile Drawer */
   .mobile-drawer {
-    display: none;
     border-top: 1px solid var(--color-divider);
     background-color: var(--bg-primary);
     padding: 1.5rem var(--container-pad);
+    overflow: hidden;
   }
 
   .mobile-nav-links {
@@ -265,10 +272,6 @@
 
     .menu-toggle {
       display: flex;
-    }
-
-    .mobile-drawer {
-      display: block;
     }
   }
 </style>
