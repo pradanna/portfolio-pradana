@@ -182,6 +182,9 @@
     justify-content: center;
     border: 1px solid var(--color-divider);
     background: var(--bg-surface);
+    cursor: pointer;
+    padding: 0;
+    position: relative;
   }
 
   .hamburger-bar {
@@ -197,10 +200,11 @@
   .hamburger-bar::after {
     content: '';
     position: absolute;
+    left: 0;
     width: 20px;
     height: 2px;
     background-color: var(--text-main);
-    transition: transform var(--transition-normal);
+    transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
   }
 
   .hamburger-bar::before {
@@ -212,15 +216,17 @@
   }
 
   .hamburger-bar.active {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .hamburger-bar.active::before {
-    transform: translateY(6px) rotate(45deg);
+    top: 0;
+    transform: rotate(45deg);
   }
 
   .hamburger-bar.active::after {
-    transform: translateY(-6px) rotate(-45deg);
+    bottom: 0;
+    transform: rotate(-45deg);
   }
 
   /* Mobile Drawer */
