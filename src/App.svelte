@@ -29,8 +29,8 @@
     <!-- 4. Showcase Portofolio Slider Gambar Proyek -->
     <PortfolioGallery />
 
-    <!-- 5. Rate Card & Paket Maintenance -->
-    <RateCard />
+    <!-- 5. Rate Card & Paket Maintenance (Disembunyikan sementara) -->
+    <!-- <RateCard /> -->
 
     <!-- 6. Proses Kerja -->
     <Process />
