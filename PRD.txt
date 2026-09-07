@@ -1,0 +1,207 @@
+# PRD Desain — Web Portfolio Software House
+
+## 1. Ringkasan
+
+Website portofolio untuk software house solo (fullstack developer, spesialisasi HRIS, Payroll, POS, ERP custom) yang berfungsi sebagai:
+- Alat closing utama untuk calon klien bisnis (owner UMKM, HR/ops manager)
+- Pengganti proses "jelaskan dari nol" — studi kasus & rate card menjawab pertanyaan klien sebelum mereka bertanya
+- Filter kualitas leads (rate card starting price menyaring prospek yang budget-nya tidak sesuai)
+
+**Target audiens:** pengambil keputusan bisnis non-teknis (bukan developer/recruiter) — bahasa dan visual harus mudah dicerna orang yang tidak paham istilah teknis.
+
+**Tone visual yang diminta:** simple, tapi playful. Bukan playful-ramai (warna-warni gonta-ganti), tapi playful lewat *satu elemen bentuk yang konsisten* + micro-interaction kecil, dengan struktur halaman yang tetap rapi dan mudah dipindai (scannable).
+
+---
+
+## 2. Design Plan
+
+### Konsep dasar
+Analoginya: sistem custom (HRIS/POS/ERP) itu sebenarnya seperti "blok-blok logika bisnis yang disusun rapi" — modul absensi, modul payroll, modul stok, dst saling terhubung. Ide desain: pakai motif **bentuk geometris sederhana yang saling terhubung** (bukan ikon generik, tapi bentuk custom — persegi dengan sudut membulat asimetris, garis penghubung seperti diagram alur) sebagai elemen visual berulang. Ini playful karena bentuknya organik-tidak-kaku, tapi tetap simple karena cuma 1-2 bentuk yang dipakai konsisten, bukan dekorasi random.
+
+### Warna (hindari default cream+terracotta atau dark+neon)
+- `#FFFBF2` — Latar utama, off-white hangat (bukan cream standar, sedikit lebih kuning pucat)
+- `#1B1B1F` — Teks utama, hitam kebiruan gelap (bukan pure black/#111 generik)
+- `#3D5A80` — Aksen primer, biru slate — merepresentasikan "sistem/kepercayaan/struktur"
+- `#F2A65A` — Aksen sekunder, oranye madu hangat — elemen playful (dipakai sangat terbatas: CTA, highlight kecil)
+- `#8FB39A` — Aksen tersier, hijau sage — dipakai untuk status/badge kecil (mis. "Aktif digunakan klien")
+- `#E8E2D4` — Border/divider halus, warna netral hangat
+
+Prinsip: 90% halaman didominasi off-white + teks gelap + biru slate. Oranye madu dipakai sangat jarang (1-2 titik fokus per layar) supaya tetap "simple", bukan ramai.
+
+### Tipografi
+- **Display/Headline:** Fraunces (serif dengan karakter sedikit playful di lengkungannya, tidak kaku seperti serif klasik) — dipakai di headline besar
+- **Body/UI:** Inter — netral, sangat mudah dibaca, kontras jelas dengan Fraunces
+- Skala tipe: headline besar 48-64px, subheading 24-28px, body 16-18px, label kecil 13px (tidak all-caps — pakai sentence case dengan warna sedikit lebih muted untuk membedakan level)
+
+### Layout
+- Alignment: **left-aligned** untuk sebagian besar konten (lebih mudah dipindai untuk pembaca non-teknis), dengan hero section yang bisa sedikit lebih ekspresif (elemen bentuk geometris mengambang di sisi kanan hero)
+- Grid sederhana, banyak white space — hindari kartu seragam ber-shadow generik. Studi kasus ditampilkan sebagai **panel bergantian kiri-kanan** (bukan grid kartu identik), supaya tiap proyek terasa "punya panggung sendiri"
+- Satu momen animasi bermakna: saat scroll pertama kali masuk ke section "Studi Kasus", bentuk geometris penghubung "menggambar diri" (seperti garis diagram alur ditarik) — ini satu-satunya animasi besar, sisanya statis
+
+### Prinsip unik untuk brief ini
+1. Bentuk geometris penghubung = motif berulang yang menyatukan seluruh halaman (bukan ikon stok atau ilustrasi generik)
+2. Oranye madu diperlakukan sebagai "sorotan langka", bukan warna sekunder yang dipakai di mana-mana
+3. Studi kasus dapat "panggung sendiri" per proyek, bukan kartu kotak seragam
+4. Tidak ada eyebrow label ALL-CAPS, tidak ada dekorasi '→', tidak ada meta string dengan titik tengah — label ditulis dengan bahasa natural
+
+---
+
+## 3. Sitemap / Struktur Halaman
+
+```
+┌─────────────────────────────────────┐
+│  NAV: Logo | Layanan | Studi Kasus  │
+│       Rate | Proses | Kontak         │
+└─────────────────────────────────────┘
+│  1. HERO                             │
+│  2. TRUST SIGNAL (logo klien)        │
+│  3. LAYANAN                          │
+│  4. STUDI KASUS (panel bergantian)   │
+│  5. RATE CARD                        │
+│  6. PROSES KERJA                     │
+│  7. TENTANG                          │
+│  8. TESTIMONI                        │
+│  9. KONTAK / CTA PENUTUP             │
+│  FOOTER                              │
+```
+
+---
+
+## 4. Wireframe per Section
+
+### 1. Hero
+```
+┌──────────────────────────────────────────────────┐
+│  [Logo]              Layanan  Studi Kasus  Kontak │
+│                                                    │
+│   Sistem custom yang         ╭──╮                 │
+│   bikin bisnis Anda          │  │╲                │
+│   jalan lebih rapi.          ╰──╯ ╲___             │
+│                                    ╱   ╲           │
+│   HRIS, Payroll, POS, dan ERP     ╲___╱            │
+│   yang dibangun sesuai alur                        │
+│   kerja bisnis Anda — bukan                        │
+│   template siap pakai.                             │
+│                                                    │
+│   [ Konsultasi Gratis ]  [ Lihat Studi Kasus ]     │
+└──────────────────────────────────────────────────┘
+```
+Catatan: bentuk geometris di kanan bukan dekorasi kosong — bisa dianimasikan pelan (drift halus) sebagai satu-satunya motion non-trigger di halaman.
+
+### 2. Trust Signal
+```
+┌──────────────────────────────────────────────────┐
+│   Dipercaya oleh bisnis seperti:                  │
+│   [Logo Yousee]   [Logo klien 2]   [Logo klien 3] │
+└──────────────────────────────────────────────────┘
+```
+
+### 3. Layanan
+```
+┌──────────────────────────────────────────────────┐
+│   Yang bisa kami bangun untuk bisnis Anda         │
+│                                                    │
+│   ╭──╮ HRIS & Payroll        ╭──╮ POS             │
+│   │  │ Kelola absensi,        │  │ Transaksi,      │
+│   ╰──╯ cuti, dan gaji         ╰──╯ stok, laporan   │
+│        tanpa Excel ribet.          real-time.      │
+│                                                    │
+│   ╭──╮ ERP                   ╭──╮ Sistem Custom    │
+│   │  │ Hubungkan semua        │  │ Punya alur kerja │
+│   ╰──╯ divisi jadi satu       ╰──╯ unik? Kami bikin│
+│        alur data.                   dari nol.       │
+└──────────────────────────────────────────────────┘
+```
+
+### 4. Studi Kasus (panel bergantian, bukan grid kartu)
+```
+┌──────────────────────────────────────────────────┐
+│   [Screenshot besar]     │  Yousee Indonesia       │
+│   dashboard HRIS         │  Masalah: proses payroll │
+│                          │  manual makan 3 hari/    │
+│                          │  bulan.                  │
+│                          │  Solusi: HRIS custom     │
+│                          │  dengan approval workflow │
+│                          │  otomatis.                │
+│                          │  Hasil: proses jadi 4 jam.│
+├──────────────────────────────────────────────────┤
+│  ERP Toko Elektronik      │    [Screenshot besar]   │
+│  Masalah: stok kulkas/TV  │    dashboard ERP         │
+│  antar cabang tidak sinkron│                        │
+│  Solusi: ERP modular      │                          │
+│  (Go + Svelte)            │                          │
+│  Label: Studi Kasus/Demo  │                          │
+└──────────────────────────────────────────────────┘
+```
+Catatan: proyek client asli vs proyek demo/eksplorasi diberi label kecil yang jujur ("Proyek Klien" / "Studi Kasus & Eksplorasi"), sesuai kesepakatan sebelumnya.
+
+### 5. Rate Card
+```
+┌──────────────────────────────────────────────────┐
+│   Mulai dari berapa?                              │
+│                                                    │
+│   POS              HRIS/Payroll        ERP        │
+│   Mulai Rp X jt     Mulai Rp X jt      Mulai Rp X jt│
+│   Termasuk: ...     Termasuk: ...      Hubungi kami│
+│                                                    │
+│   Harga final tergantung kompleksitas.            │
+│   [ Jadwalkan Konsultasi Gratis ]                 │
+│                                                    │
+│   —                                                 │
+│   Paket Perawatan Bulanan                          │
+│   Basic Rp X / Standard Rp X / Priority Rp X       │
+└──────────────────────────────────────────────────┘
+```
+
+### 6. Proses Kerja
+```
+┌──────────────────────────────────────────────────┐
+│  Konsultasi → Proposal → Development → Deploy → Support │
+│  (garis penghubung bentuk geometris, bukan angka 01-02-03)│
+└──────────────────────────────────────────────────┘
+```
+
+### 7. Tentang
+```
+┌──────────────────────────────────────────────────┐
+│  [Foto]   Halo, saya Pradana.                     │
+│           Fullstack developer yang fokus bikin    │
+│           sistem bisnis rapi pakai pendekatan     │
+│           Domain-Driven Design — supaya sistem    │
+│           tumbuh bareng bisnis, bukan jadi beban. │
+└──────────────────────────────────────────────────┘
+```
+
+### 8. Testimoni
+```
+┌──────────────────────────────────────────────────┐
+│  "Kutipan singkat dari klien tentang dampak nyata" │
+│   — Nama, Jabatan, Perusahaan                     │
+└──────────────────────────────────────────────────┘
+```
+
+### 9. Kontak / CTA Penutup
+```
+┌──────────────────────────────────────────────────┐
+│   Siap bikin sistem yang pas buat bisnis Anda?    │
+│   [ Konsultasi Gratis ]   atau chat WhatsApp       │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+## 5. Panduan Copy Singkat
+
+- Hindari istilah teknis di hero & layanan (skip "DDD", "microservices", dst) — pakai di studi kasus saja kalau relevan
+- CTA aktif & spesifik: "Konsultasi Gratis", bukan "Submit" atau "Learn More"
+- Studi kasus ditulis format: masalah → solusi → hasil (angka jika ada)
+- Label proyek jujur: bedakan "Proyek Klien" dan "Studi Kasus & Eksplorasi"
+
+---
+
+## 6. Catatan Teknis Implementasi
+
+- Responsive wajib sampai mobile (panel studi kasus bergantian jadi stack vertikal di mobile)
+- Motion: hanya 1 momen besar (bentuk geometris "tergambar" saat scroll ke studi kasus) + hover state halus di tombol/link, hormati `prefers-reduced-motion`
+- Kontras warna dicek untuk aksesibilitas (terutama oranye madu di atas off-white — pakai hanya untuk elemen besar/bold, bukan teks kecil)
+- Font loading: Fraunces (variable font disarankan) + Inter, keduanya tersedia di Google Fonts
