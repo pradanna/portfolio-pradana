@@ -38,9 +38,11 @@
 
     <!-- Right Side CTA -->
     <div class="nav-actions">
-      <Button variant="primary" size="sm" href="#kontak">
-        Konsultasi Gratis
-      </Button>
+      <div class="nav-cta-desktop">
+        <Button variant="primary" size="sm" href="#kontak">
+          Konsultasi Gratis
+        </Button>
+      </div>
 
       <!-- Mobile Hamburger Toggle -->
       <button
@@ -248,6 +250,10 @@
 
   @media (max-width: 860px) {
     .nav-links {
+      display: none;
+    }
+
+    .nav-cta-desktop {
       display: none;
     }
 
