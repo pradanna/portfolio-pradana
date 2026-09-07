@@ -1,6 +1,5 @@
 <script lang="ts">
   import { profileData } from '../../data/profile';
-  import Badge from '../common/Badge.svelte';
   import Button from '../common/Button.svelte';
 </script>
 
@@ -17,9 +16,6 @@
               alt="Foto {profileData.name}"
               class="avatar-photo"
             />
-            <div class="portrait-badge">
-              <Badge variant="status">Solo Fullstack Dev</Badge>
-            </div>
           </div>
 
           <div class="portrait-meta">
@@ -101,13 +97,7 @@
     border: 2px solid var(--bg-white);
   }
 
-  .portrait-badge {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-  }
+
 
   .portrait-meta {
     display: flex;
