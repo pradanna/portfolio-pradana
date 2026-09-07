@@ -20,9 +20,9 @@
           Fullstack Developer spesialis Laravel, React, dan Flutter. Membantu bisnis dan organisasi membangun sistem digital yang skalabel, efisien, dan terintegrasi.
         </p>
         <div class="status-indicator">
-          <Badge variant="status">
+          <!-- <Badge variant="status">
             Tersedia untuk proyek baru
-          </Badge>
+          </Badge> -->
         </div>
       </div>
 
