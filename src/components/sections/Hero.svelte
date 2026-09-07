@@ -19,10 +19,10 @@
 
       <!-- Action Buttons -->
       <div class="hero-actions">
-        <Button variant="primary" size="lg" href="#kontak">
+        <!-- <Button variant="primary" size="lg" href="#kontak">
           Konsultasi Gratis
-        </Button>
-        <Button variant="outline" size="lg" href="#portfolio">
+        </Button> -->
+        <Button variant="primary" size="lg" href="#portfolio">
           Lihat Portofolio
         </Button>
       </div>

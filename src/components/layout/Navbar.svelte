@@ -41,9 +41,9 @@
     <!-- Right Side CTA -->
     <div class="nav-actions">
       <div class="nav-cta-desktop">
-        <Button variant="primary" size="sm" href="#kontak">
+        <!-- <Button variant="primary" size="sm" href="#kontak">
           Konsultasi Gratis
-        </Button>
+        </Button> -->
       </div>
 
       <!-- Mobile Hamburger Toggle -->
@@ -74,9 +74,9 @@
           </a>
         {/each}
         <div class="mobile-cta">
-          <Button variant="primary" size="md" href="#kontak" onclick={closeMenu}>
+          <!-- <Button variant="primary" size="md" href="#kontak" onclick={closeMenu}>
             Konsultasi Gratis
-          </Button>
+          </Button> -->
         </div>
       </div>
     </div>

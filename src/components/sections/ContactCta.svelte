@@ -26,7 +26,7 @@
         <span class="section-label">Langkah Selanjutnya</span>
         <h2 class="contact-headline">Siap bikin sistem yang pas buat bisnis Anda?</h2>
         <p class="contact-desc">
-          Ceritakan kendala operasional Anda dalam 15-30 menit sesi konsultasi gratis. Kami akan berikan gambaran alur solusi sebelum Anda memutuskan apa pun.
+          Ceritakan kendala atau kebutuhan operasional Anda. Kami akan berikan gambaran alur solusi dan estimasi yang realistis untuk sistem bisnis Anda.
         </p>
 
         <div class="contact-perks">
@@ -108,7 +108,7 @@
             href={getWhatsAppUrl()}
             external
           >
-            Konsultasi Gratis via WhatsApp
+            Hubungi via WhatsApp
           </Button>
           <span class="submit-note">Terbuka langsung di WhatsApp Anda dengan draf pesan otomatis.</span>
         </div>
