@@ -14,7 +14,7 @@
   <div class="container">
     <div class="section-header">
       <span class="section-label">Layanan Spesialis</span>
-      <h2>Yang bisa kami bangun untuk bisnis Anda.</h2>
+      <h2>Yang bisa saya bangun untuk bisnis Anda.</h2>
       <p class="section-desc">
         Fokus pada 4 sistem inti operasional dan digital. Tanpa biaya lisensi berulang per-user dan disesuaikan 100% dengan alur kerja nyata Anda.
       </p>
@@ -45,7 +45,7 @@
             <!-- Bukti Klien Nyata -->
             {#if service.proofs && service.proofs.length > 0}
               <div class="proofs-box">
-                <span class="proofs-label">Sudah kami selesaikan:</span>
+                <span class="proofs-label">Sudah saya selesaikan:</span>
                 <div class="proofs-tags">
                   {#each service.proofs as proof}
                     <span class="proof-tag">{proof}</span>

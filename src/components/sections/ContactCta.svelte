@@ -26,7 +26,7 @@
         <span class="section-label">Langkah Selanjutnya</span>
         <h2 class="contact-headline">Siap bikin sistem yang pas buat bisnis Anda?</h2>
         <p class="contact-desc">
-          Ceritakan kendala atau kebutuhan operasional Anda. Kami akan berikan gambaran alur solusi dan estimasi yang realistis untuk sistem bisnis Anda.
+          Ceritakan kendala atau kebutuhan operasional Anda. Saya akan berikan gambaran alur solusi dan estimasi yang realistis untuk sistem bisnis Anda.
         </p>
 
         <div class="contact-perks">

@@ -99,7 +99,7 @@
       <span class="section-label">Showcase & Portofolio Nyata</span>
       <h2>Hasil pengerjaan proyek klien & institusi.</h2>
       <p class="section-desc">
-        Tangkapan layar asli dari aplikasi web, sistem ERP, kasir POS, dan mobile apps yang telah kami bangun dan selesaikan untuk operasional nyata.
+        Tangkapan layar asli dari aplikasi web, sistem ERP, kasir POS, dan mobile apps yang telah saya bangun dan selesaikan untuk operasional nyata.
       </p>
     </div>
 

@@ -46,7 +46,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'custom-system',
     title: 'Sistem Custom',
-    shortDesc: 'Punya alur kerja unik? Kami rancang dan bangun dari nol.',
+    shortDesc: 'Punya alur kerja unik? Saya rancang dan bangun dari nol.',
     detail: 'Aplikasi SaaS internal untuk proses bisnis spesifik yang tidak bisa diwadahi oleh aplikasi pasaran. Dibangun pas dengan proses yang sudah berjalan di tim Anda.',
     features: [
       'Alur kerja disesuaikan 100% dengan SOP Anda',
